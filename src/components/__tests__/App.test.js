@@ -1,6 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
+import Root from '../../Root';
 import App from '../App';
 import CommentBox from '../CommentBox';
 import CommentList from '../CommentList';
