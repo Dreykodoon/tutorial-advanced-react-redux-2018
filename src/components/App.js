@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import * as actions from '../actions';
 import CommentBox from './CommentBox';
 import CommentList from './CommentList';
+import requireAuth from './requireAuth';
 
 class App extends React.Component {
     renderButton() {
@@ -37,7 +38,7 @@ class App extends React.Component {
         return (
             <div>
                 {this.renderHeader()}
-                <Route path="/post" component={CommentBox} />
+                <Route path="/post" component={requireAuth(CommentBox)} />
                 <Route path="/" exact component={CommentList} />
             </div>
         );
